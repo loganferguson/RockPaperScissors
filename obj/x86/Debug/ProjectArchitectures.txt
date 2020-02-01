@@ -1,0 +1,1 @@
+C:\Users\lferg\source\repos\RockPaperScissors\RockPaperScissors\RockPaperScissors.csproj;x86

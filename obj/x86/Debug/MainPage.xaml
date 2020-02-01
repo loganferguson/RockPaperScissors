@@ -1,0 +1,183 @@
+﻿<Page
+    x:Class="RockPaperScissors.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RockPaperScissors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="{ThemeResource SystemControlBackgroundBaseLowBrush}">
+
+    <Grid>
+        <Grid.BorderBrush>
+            <SolidColorBrush Color="#FFF03939" Opacity="0.2"/>
+        </Grid.BorderBrush>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/hands.jpg"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Rectangle Grid.Row="1" Grid.Column="1">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF979EA5" Opacity="0.9"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Row="1" Grid.Column="2">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFF3F9FF" Opacity="0.85"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Grid.Row="1" Grid.Column="3">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFF9A431" Opacity="0.9"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:ConnectionId='2' x:Name ="enemyRectangle" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF31B5F9" Opacity="0.85"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock x:ConnectionId='3' 
+            x:Name ="blockEnemy" 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="3"
+            FontFamily="Wide Latin"
+            FontSize="50"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" 
+            TextDecorations="Underline">
+        </TextBlock>
+
+        <TextBlock x:ConnectionId='4' 
+            x:Name ="youLose" 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="3"
+            FontFamily="Wide Latin"
+            FontSize="35"
+            Foreground="Red"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin ="0,0,0,10">
+        </TextBlock>
+
+        <TextBlock x:ConnectionId='5' 
+            x:Name ="youWin" 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="3"
+            FontFamily="Wide Latin"
+            FontSize="35"
+            Foreground="LawnGreen"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin ="0,0,0,10">
+        </TextBlock>
+
+        <TextBlock x:ConnectionId='6' 
+            x:Name ="staleMate" 
+            Grid.Row="2" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="3"
+            FontFamily="Wide Latin"
+            FontSize="35"
+            Foreground="LightGoldenrodYellow"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin ="0,0,0,10">
+        </TextBlock>
+
+        <Button x:ConnectionId='7' 
+                        x:Name="btnRock" 
+                        Grid.Row="1" 
+                        Grid.Column="1" 
+                        Width="235" 
+                        Height="268" 
+                        HorizontalAlignment="Center"
+                        FontSize="25px" 
+                                  
+                                                    
+            FontFamily="Wide Latin" 
+                                                 >
+
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/rock.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:ConnectionId='8' 
+                        x:Name="btnPaper" 
+                        Grid.Row="1" 
+                        Grid.Column="2" 
+                        Width="237" 
+                        Height="268" 
+                        HorizontalAlignment="Center"
+                        FontSize="25px" 
+                                   
+            FontFamily="Wide Latin" 
+                                                     
+                                                  >
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/paper.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:ConnectionId='9' 
+                    x:Name="btnScissors" 
+                    Grid.Row="1" 
+                    Grid.Column="3" 
+                    Width="235" 
+                    Height="267" 
+                    HorizontalAlignment="Center"
+                    FontSize="20px" 
+                                      
+            FontFamily="Wide Latin" 
+                                                        
+                                                     >
+            <Button.BorderBrush>
+                <ImageBrush Stretch="Fill"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/Assets/scissors.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:ConnectionId='10' 
+            x:Name="btnPlayAgain" 
+            Grid.Row="3" 
+            Grid.Column="2" 
+            Width="200px" 
+            Height="75" 
+            HorizontalAlignment="Center" 
+            Background="#FF53EA48" 
+            FontSize="16" 
+            FontFamily="Wide Latin" 
+                                      >
+            Play Again!
+        </Button>
+
+
+
+
+
+
+    </Grid>
+</Page>
+
